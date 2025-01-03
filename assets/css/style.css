@@ -116,6 +116,15 @@ input {
     gap: 1.75rem;
 }
 
+.section{
+    padding-block: 8rem;
+}
+
+.section__title{
+    font-size: var(--h1-font-size);
+    margin-bottom: 1rem;
+}
+
 /* Home */
 .home{
     padding-block: 16rem 9rem;
@@ -150,4 +159,68 @@ input {
     border-radius: 50%;
     border: 0.75rem solid var(--container-color);
     margin-left: auto;
+}
+
+/* ===============About=============== */
+.about{
+    background-color: var(--container-color);
+}
+
+.about__container{
+    grid-template-columns: 5fr 7fr;
+    align-items: center;
+    column-gap: 4rem;
+}
+
+.about__img{
+    border-radius: var(--radius);
+}
+
+.about__description {
+    margin-bottom: 2rem;
+}
+
+.tabs__btns{
+    display: flex;
+    column-gap: 3.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.tabs__btn .tabs__description span:first-child{
+    font-weight: var(--weight-500);
+}
+
+.tabs__btn{
+    cursor: pointer;
+    color: var(--title-color);
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.tabs__btn::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30%;
+    height: 2px;
+    background-color: var(--text-color);
+}
+
+.tabs__data{
+    row-gap: 1rem;
+}
+
+.tabs__description span:last-child{
+    display: block;
+}
+
+/* Active tab */
+.tabs__btn.tab__active{
+    color: var(--first-color);
+}
+
+.tabs__btn.tab__active::after{
+    background-color: var(--first-color);
+    width: 100%;
 }
