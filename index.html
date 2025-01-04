@@ -264,57 +264,139 @@
 				</p>
 
 				<div class="flex portfolio__items container">
-                    <div class="portfolio__item">
-                        <div class="protfolio__container container grid">
-                            <img
-                                src="./assets/img/portfolio-01.png"
-                                alt=""
-                                class="portfolio__img"
-                            />
-    
-                            <div class="portfolio__data">
-                                <p class="portfolio__subtitle">Web Development</p>
-                                <h3 class="portfolio__title">
-                                    Real Estate Full-Stack Application
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="portfolio__item">
-                        <div class="protfolio__container container grid">
-                            <img
-                                src="./assets/img/portfolio-02.png"
-                                alt=""
-                                class="portfolio__img"
-                            />
-    
-                            <div class="portfolio__data">
-                                <p class="portfolio__subtitle">Web Development</p>
-                                <h3 class="portfolio__title">
-                                    React Bookstore Application
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="portfolio__item">
-                        <div class="protfolio__container container grid">
-                            <img
-                                src="./assets/img/portfolio-03.png"
-                                alt=""
-                                class="portfolio__img"
-                            />
-    
-                            <div class="portfolio__data">
-                                <p class="portfolio__subtitle">Web Development</p>
-                                <h3 class="portfolio__title">React Restaurant Website</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+					<div class="portfolio__item">
+						<div class="protfolio__container container grid">
+							<img
+								src="./assets/img/portfolio-01.png"
+								alt=""
+								class="portfolio__img"
+							/>
+
+							<div class="portfolio__data">
+								<p class="portfolio__subtitle">
+									Web Development
+								</p>
+								<h3 class="portfolio__title">
+									Real Estate Full-Stack Application
+								</h3>
+							</div>
+						</div>
+					</div>
+
+					<div class="portfolio__item">
+						<div class="protfolio__container container grid">
+							<img
+								src="./assets/img/portfolio-02.png"
+								alt=""
+								class="portfolio__img"
+							/>
+
+							<div class="portfolio__data">
+								<p class="portfolio__subtitle">
+									Web Development
+								</p>
+								<h3 class="portfolio__title">
+									React Bookstore Application
+								</h3>
+							</div>
+						</div>
+					</div>
+
+					<div class="portfolio__item">
+						<div class="protfolio__container container grid">
+							<img
+								src="./assets/img/portfolio-03.png"
+								alt=""
+								class="portfolio__img"
+							/>
+
+							<div class="portfolio__data">
+								<p class="portfolio__subtitle">
+									Web Development
+								</p>
+								<h3 class="portfolio__title">
+									React Restaurant Website
+								</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ===============Contact================ -->
+			<section class="contact section" id="contact">
+				<div class="contact__container container grid">
+					<div class="contact__content">
+						<h2 class="section__title">Hire Me</h2>
+
+						<p class="contact__description">
+							Contact with me phone:
+							<a href="+01707696955">01707696955</a> or email:
+							<a href="mailto:salmanibnshafi@gmail.com"
+								>salmanibnshafi@gmail.com</a
+							>
+						</p>
+
+						<form class="contact__from" id="contact-form">
+							<div class="contact__from-input">
+								<input
+									type="text"
+									name="name"
+									placeholder="Your Name *"
+									class="contact__input"
+									id="contact-name"
+								/>
+							</div>
+
+							<div class="contact__from-input">
+								<input
+									type="email"
+									name="email"
+									placeholder="Your e-mail *"
+									class="contact__input"
+									id="contact-email"
+								/>
+							</div>
+
+							<div class="contact__from-input">
+								<input
+									type="text"
+									name="subject"
+									placeholder="Write a Subject"
+									class="contact__input"
+									id="contact-subject"
+								/>
+							</div>
+
+							<div class="contact__from-input">
+								<textarea
+									name="message"
+									id="contact-message"
+									class="contact__input textarea"
+									placeholder="Your Message"
+								></textarea>
+							</div>
+
+							<input type="submit" value="submit" class="btn" />
+
+							<p class="error__message" id="error-message"></p>
+						</form>
+					</div>
+
+					<img
+						src="./assets/img/contact-img.jpg"
+						alt=""
+						class="contact__img"
+					/>
+				</div>
 			</section>
 		</main>
+
+		<!-- Email JS -->
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+		></script>
 
 		<!-- Main JS -->
 		<script src="./assets/js/main.js"></script>
