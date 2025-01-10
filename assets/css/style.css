@@ -61,6 +61,10 @@
 	box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 input,
 textarea,
 body {
@@ -184,6 +188,28 @@ input {
 .nav__toggle,
 .nav__close {
 	display: none;
+}
+
+/* Change Background Header */
+.scroll-header {
+    position: fixed;
+    background-color: var(--container-color);
+    box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.25);
+    animation: slide-down 0.7s;
+}
+
+@keyframes slide-down{
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.scroll-header .nav{
+    height: var(--header-height);
 }
 
 /* Home */
@@ -558,4 +584,29 @@ input {
 	font-size: var(--small-font-size);
 	font-weight: var(--weight-400);
 	justify-self: flex-end;
+}
+
+/* Scroll Up */
+.scrollup {
+    position: fixed;
+    right: 1rem;
+    bottom: -100%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--title-color);
+    display: grid;
+    place-items: center;
+    z-index: var(--z-fixed);
+    transition: all 4s var(--transition);
+}
+
+.scrollup__icon{
+    color: var(--first-color);
+    font-size: 2.25rem;
+    line-height: 1;
+}
+
+.show-scroll {
+    bottom: 3rem;
 }
