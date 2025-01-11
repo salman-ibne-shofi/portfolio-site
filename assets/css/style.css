@@ -182,6 +182,7 @@ input {
 	left: 0;
 	width: 100%;
 	z-index: var(--z-fixed);
+    padding: 1.5rem;
 }
 
 .nav,
@@ -220,13 +221,9 @@ input {
 	}
 }
 
-.scroll-header .nav {
-	height: var(--header-height);
-}
-
 /* Home */
 .home {
-	padding-block: 16rem 9rem;
+	padding-block: 12rem 9rem;
 }
 
 .home__container {
@@ -532,23 +529,11 @@ input {
 }
 
 .footer__logo {
-	color: var(--title-color);
-	font-size: 2.3rem;
-	font-weight: var(--weight-700);
-}
-
-.footer__logo span {
-	color: var(--first-color);
+	width: 64px;
 }
 
 .nav__logo {
-	color: var(--title-color);
-	font-size: 2.3rem;
-	font-weight: var(--weight-700);
-}
-
-.nav__logo span {
-	color: var(--first-color);
+	width: 64px;
 }
 
 .nav__list {
