@@ -260,6 +260,23 @@ input {
 	margin-left: auto;
 }
 
+.cv__btn {
+	margin-top: 32px;
+	padding: 1rem 2.5rem;
+    border-color: var(--text-color);
+    border: 2px solid var(--border-color);
+	color: var(--title-color);
+    font-size: var(--small-font-size);
+	font-weight: var(--weight-400);
+	border-radius: 6px;
+    display: inline-block;
+    transition: all 0.3s var(--transition);
+}
+
+.cv__btn:hover {
+	background-color: var(--first-color);
+}
+
 /* ===============About=============== */
 .about {
 	background-color: var(--container-color);
