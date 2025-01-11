@@ -11,12 +11,21 @@ window.addEventListener("scroll", scrollHeader);
 /* ====================Show Scroll Up=================== */
 function scrollUp() {
 	const scrollUp = document.getElementById("scroll-up");
-	// when the scroll is greater than 350 viewport height, add the show-scroll class to scroll-top class 
+	// when the scroll is greater than 350 viewport height, add the show-scroll class to scroll-top class
 	if (this.scrollY >= 350) scrollUp.classList.add("show-scroll");
 	else scrollUp.classList.remove("show-scroll");
 }
 
 window.addEventListener("scroll", scrollUp);
+
+/*================Nav Click Effect=======================*/
+const navLinks = document.querySelectorAll("#nav-menu li a");
+navLinks.forEach((link) => {
+	link.addEventListener("click", (e) => {
+		navLinks.forEach((link) => link.classList.remove("active-link"));
+		e.target.classList.add("active-link");
+	});
+});
 
 /* ================About Tabs================ */
 const tabs = document.querySelectorAll("[data-target]"),
