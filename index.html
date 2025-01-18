@@ -8,33 +8,56 @@
 			rel="stylesheet"
 			href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
 		/>
+
+		<!-- Tailwind CSS -->
+		<script src="https://cdn.tailwindcss.com"></script>
 		<!-- CSS -->
 		<link rel="stylesheet" href="./assets/css/style.css" />
 		<title>Portfolio Website</title>
 	</head>
 	<body>
+		<!-- Navbar section -->
 		<header class="header" id="header">
-			<nav class="nav container">
+			<nav class="nav w-[90vw] mx-auto">
 				<a href="index.html" class=""
-					><img src="./assets/img/SIS.png" class="nav__logo" alt=""
+					><img
+						src="./assets/img/SIS.png"
+						class="nav__logo min-w-[60px] w-[60px]"
+						alt=""
 				/></a>
 
 				<div class="nav__menu" id="nav-menu">
 					<ul class="nav__list">
 						<li>
-							<a href="#home" class="nav__link active-link"
+							<a
+								href="#home"
+								class="nav__link active-link hidden sm:block"
 								>Home</a
 							>
 						</li>
-						<li><a href="#about" class="nav__link">About</a></li>
 						<li>
-							<a href="#services" class="nav__link">Skills</a>
+							<a href="#about" class="nav__link hidden sm:block"
+								>About</a
+							>
 						</li>
 						<li>
-							<a href="#portfolio" class="nav__link">Projects</a>
+							<a
+								href="#services"
+								class="nav__link hidden sm:block"
+								>Skills</a
+							>
 						</li>
 						<li>
-							<a href="#contact" class="nav__link">Contact</a>
+							<a
+								href="#portfolio"
+								class="nav__link hidden sm:block"
+								>Projects</a
+							>
+						</li>
+						<li>
+							<a href="#contact" class="nav__link hidden sm:block"
+								>Contact</a
+							>
 						</li>
 					</ul>
 
@@ -47,7 +70,7 @@
 					<a
 						href="https://www.facebook.com/salman.ibnshafi.7/"
 						target="_blank"
-						class="nav__social-link"
+						class="nav__social-link hidden sm:block"
 					>
 						<i class="uil uil-facebook-f"></i>
 					</a>
@@ -55,7 +78,7 @@
 					<a
 						href="linkedin.com/in/salman-ibn-shafi-2963a6282"
 						target="_blank"
-						class="nav__social-link"
+						class="nav__social-link hidden sm:block"
 					>
 						<i class="uil uil-linkedin"></i>
 					</a>
@@ -63,19 +86,27 @@
 					<a
 						href="https://github.com/salman-ibne-shofi"
 						target="_blank"
-						class="nav__social-link"
+						class="nav__social-link hidden sm:block"
 					>
 						<i class="uil uil-github"></i>
 					</a>
 				</div>
 
 				<div class="nav__btns">
-					<a href="#contact" class="nav__link-btn btn">Let's Talk</a>
+					<a href="#contact" class="nav__link-btn btn hidden sm:block"
+						>Let's Talk</a
+					>
 
 					<div class="nav__toggle" id="nav-toggle">
 						<i class="uil uil-bars"></i>
 					</div>
 				</div>
+
+				<img
+					src="./assets/img/hamburger-5-svgrepo-com.svg"
+					class="burger-icon sm:hidden block"
+					alt=""
+				/>
 			</nav>
 		</header>
 
@@ -83,11 +114,14 @@
 		<main class="main">
 			<!-- ================Home=============== -->
 			<section class="home" id="home">
-				<div class="home__container container grid">
+				<div class="w-[90vw] mx-auto home__container grid">
 					<div class="home__content">
-						<span class="home__subtitle">Welcome To My Portfolio</span>
-						<h1 class="home__title">
-							Hi, I'm Salman <span>Web Developer.</span>
+						<span class="home__subtitle"
+							>Welcome To My Portfolio</span
+						>
+						<h1 class="home__title text-4xl md:text-7xl">
+							Hi, I'm Salman. <br />
+							<span>Web Developer.</span>
 						</h1>
 						<a
 							href="./assets/cv/Salman_Ibn_Shafi_CV.pdf"
@@ -99,14 +133,14 @@
 					<img
 						src="./assets/img/home-img.png"
 						alt=""
-						class="home__img"
+						class="home__img hidden sm:block"
 					/>
 				</div>
 			</section>
 
 			<!-- ===============About================ -->
 			<section class="about section" id="about">
-				<div class="about__container container grid">
+				<div class="w-[90vw] mx-auto about__container grid">
 					<img
 						src="./assets/img/about-img.jpg"
 						alt=""
@@ -114,7 +148,9 @@
 					/>
 
 					<div class="about__container">
-						<h2 class="section__title">About Me</h2>
+						<h2 class="section__title sm:text-6xl text-4xl">
+							About Me
+						</h2>
 
 						<p class="about__description">
 							Welcome! I am Salman, a passionate Frontend
@@ -226,7 +262,7 @@
 					exceptional, high-performing websites & applications.
 				</p>
 
-				<div class="services__container container grid">
+				<div class="w-[90vw] mx-auto services__container grid">
 					<div class="services__item">
 						<div class="flex gap items-center">
 							<img
@@ -438,7 +474,7 @@
 					its layout.
 				</p>
 
-				<div class="flex portfolio__items container">
+				<div class="w-[90vw] mx-auto flex portfolio__items">
 					<a href="https://reactrealestateph9.netlify.app/">
 						<div class="portfolio__item">
 							<div class="protfolio__container container grid">
@@ -506,7 +542,7 @@
 
 			<!-- ===============Contact================ -->
 			<section class="contact section" id="contact">
-				<div class="contact__container container grid">
+				<div class="w-[90vw] mx-auto contact__container grid">
 					<div class="contact__content">
 						<h2 class="section__title">Hire Me</h2>
 
@@ -574,7 +610,7 @@
 
 			<!-- ==================Footer=============== -->
 			<footer class="footer">
-				<div class="footer__container container grid">
+				<div class="w-[90vw] mx-auto footer__container grid">
 					<a href="index.html" class="footer__logo"
 						><img
 							src="./assets/img/SIS.png"
