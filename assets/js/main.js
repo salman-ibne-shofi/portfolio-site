@@ -104,3 +104,22 @@ const sendEmail = (e) => {
 };
 
 contactForm.addEventListener("submit", sendEmail);
+
+// Navbar burger icon open close
+const toggleButton = document.getElementById("dropdownToggle");
+const dropdownContent = document.getElementById("dropdownContent");
+
+toggleButton.addEventListener("click", () => {
+	// Toggle the 'hidden' class to show/hide the dropdown menu
+	dropdownContent.classList.toggle("hidden");
+});
+
+// Optional: Close the dropdown when clicking anywhere else on the page
+document.addEventListener("click", (event) => {
+	if (
+		!toggleButton.contains(event.target) &&
+		!dropdownContent.contains(event.target)
+	) {
+		dropdownContent.classList.add("hidden");
+	}
+});
