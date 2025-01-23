@@ -9,6 +9,12 @@
 			href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
 		/>
 
+		<!-- daisyUI -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
 		<!-- Tailwind CSS -->
 		<script src="https://cdn.tailwindcss.com"></script>
 		<!-- CSS -->
@@ -26,38 +32,24 @@
 						alt=""
 				/></a>
 
-				<div class="nav__menu" id="nav-menu">
+				<div class="nav__menu hidden md:block" id="nav-menu">
 					<ul class="nav__list">
 						<li>
-							<a
-								href="#home"
-								class="nav__link active-link hidden sm:block"
+							<a href="#home" class="nav__link active-link"
 								>Home</a
 							>
 						</li>
 						<li>
-							<a href="#about" class="nav__link hidden sm:block"
-								>About</a
-							>
+							<a href="#about" class="nav__link">About</a>
 						</li>
 						<li>
-							<a
-								href="#services"
-								class="nav__link hidden sm:block"
-								>Skills</a
-							>
+							<a href="#services" class="nav__link">Skills</a>
 						</li>
 						<li>
-							<a
-								href="#portfolio"
-								class="nav__link hidden sm:block"
-								>Projects</a
-							>
+							<a href="#portfolio" class="nav__link">Projects</a>
 						</li>
 						<li>
-							<a href="#contact" class="nav__link hidden sm:block"
-								>Contact</a
-							>
+							<a href="#contact" class="nav__link">Contact</a>
 						</li>
 					</ul>
 
@@ -66,11 +58,11 @@
 					</div>
 				</div>
 
-				<div class="nav__socials">
+				<div class="nav__socials hidden md:flex">
 					<a
 						href="https://www.facebook.com/salman.ibnshafi.7/"
 						target="_blank"
-						class="nav__social-link hidden sm:block"
+						class="nav__social-link"
 					>
 						<i class="uil uil-facebook-f"></i>
 					</a>
@@ -78,7 +70,7 @@
 					<a
 						href="linkedin.com/in/salman-ibn-shafi-2963a6282"
 						target="_blank"
-						class="nav__social-link hidden sm:block"
+						class="nav__social-link"
 					>
 						<i class="uil uil-linkedin"></i>
 					</a>
@@ -86,27 +78,86 @@
 					<a
 						href="https://github.com/salman-ibne-shofi"
 						target="_blank"
-						class="nav__social-link hidden sm:block"
+						class="nav__social-link"
 					>
 						<i class="uil uil-github"></i>
 					</a>
 				</div>
 
-				<div class="nav__btns">
-					<a href="#contact" class="nav__link-btn btn hidden sm:block"
-						>Let's Talk</a
-					>
-
-					<div class="nav__toggle" id="nav-toggle">
-						<i class="uil uil-bars"></i>
-					</div>
+				<div class="nav__btns hidden md:flex">
+					<a href="#contact" class="nav__link-btn btn">Let's Talk</a>
 				</div>
 
-				<img
-					src="./assets/img/hamburger-5-svgrepo-com.svg"
-					class="burger-icon sm:hidden block"
-					alt=""
-				/>
+				<div class="dropdown dropdown-end md:hidden">
+					<div
+						tabindex="0"
+						role="button"
+						class="bg-base-100 btn-circle flex justify-center items-center"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-5 w-5"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M4 6h16M4 12h16M4 18h7"
+							/>
+						</svg>
+					</div>
+					<ul
+						tabindex="0"
+						class="menu menu-sm dropdown-end dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-64 p-2 shadow"
+					>
+						<div class="flex flex-col gap-4 m-4">
+							<a href="#home" class="nav__link active-link"
+								>Home</a
+							>
+
+							<a href="#about" class="nav__link">About</a>
+
+							<a href="#services" class="nav__link">Skills</a>
+
+							<a href="#portfolio" class="nav__link">Projects</a>
+
+							<a href="#contact" class="nav__link">Contact</a>
+
+							<a href="#contact" class="nav__link-btn btn p-4"
+								>Let's Talk</a
+							>
+
+							<div class="flex gap-8 justify-center">
+								<a
+									href="https://www.facebook.com/salman.ibnshafi.7/"
+									target="_blank"
+									class="nav__social-link"
+								>
+									<i class="uil uil-facebook-f"></i>
+								</a>
+
+								<a
+									href="linkedin.com/in/salman-ibn-shafi-2963a6282"
+									target="_blank"
+									class="nav__social-link"
+								>
+									<i class="uil uil-linkedin"></i>
+								</a>
+
+								<a
+									href="https://github.com/salman-ibne-shofi"
+									target="_blank"
+									class="nav__social-link"
+								>
+									<i class="uil uil-github"></i>
+								</a>
+							</div>
+						</div>
+					</ul>
+				</div>
 			</nav>
 		</header>
 
@@ -139,12 +190,14 @@
 			</section>
 
 			<!-- ===============About================ -->
-			<section class="about section" id="about">
-				<div class="w-[90vw] mx-auto about__container grid">
+			<section class="about section py-10" id="about">
+				<div
+					class="w-[90vw] mx-auto about__container flex flex-col gap-12 md:flex-row justify-between items-center"
+				>
 					<img
 						src="./assets/img/about-img.jpg"
 						alt=""
-						class="about__img"
+						class="about__img min-w-[90vw] sm:min-w-[50vw]"
 					/>
 
 					<div class="about__container">
@@ -162,7 +215,7 @@
 							projects. Let's build something amazing together!
 						</p>
 
-						<div class="tabs__btns">
+						<div class="tabs__btns gap-2 sm:gap-4">
 							<span
 								class="tabs__btn tab__active"
 								data-target="#skills"
@@ -255,20 +308,24 @@
 			</section>
 
 			<!-- ================Skills================ -->
-			<section class="services section" id="services">
-				<h2 class="section__title">Essential Tools I use</h2>
-				<p class="section__description">
+			<section class="services section py-32" id="services">
+				<h2 class="section__title text-2xl md:text-6xl">
+					Essential Tools I use
+				</h2>
+				<p class="section__description px-2">
 					Discover the powerful tools and technologies use to create
 					exceptional, high-performing websites & applications.
 				</p>
 
-				<div class="w-[90vw] mx-auto services__container grid">
-					<div class="services__item">
-						<div class="flex gap items-center">
+				<div
+					class="w-[90vw] mx-auto services__container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+				>
+					<div class="services__item flex items-center">
+						<div class="flex gap items-center p-2">
 							<img
 								src="./assets/img/javascript-svgrepo-com.svg"
 								alt=""
-								class="svg__size"
+								class="w-[32px] md:w-[64px]"
 							/>
 							<div>
 								<h3 class="services__title">JavaScript</h3>
@@ -279,12 +336,12 @@
 						</div>
 					</div>
 
-					<div class="services__item">
-						<div class="flex gap items-center">
+					<div class="services__item flex items-center">
+						<div class="flex gap items-center p-2">
 							<img
 								src="./assets/img/reactjs-svgrepo-com.svg"
 								alt=""
-								class="svg__size"
+								class="w-[32px] md:w-[64px]"
 							/>
 							<div>
 								<h3 class="services__title">ReactJS</h3>
@@ -295,12 +352,12 @@
 						</div>
 					</div>
 
-					<div class="services__item">
-						<div class="flex gap items-center">
+					<div class="services__item flex items-center">
+						<div class="flex gap items-center p-2">
 							<img
 								src="./assets/img/typescript-svgrepo-com.svg"
 								alt=""
-								class="svg__size"
+								class="w-[32px] md:w-[64px]"
 							/>
 							<div>
 								<h3 class="services__title">TypeScript</h3>
@@ -311,12 +368,12 @@
 						</div>
 					</div>
 
-					<div class="services__item">
-						<div class="flex gap items-center">
+					<div class="services__item flex items-center">
+						<div class="flex gap items-center p-2">
 							<img
 								src="./assets/img/firebase-svgrepo-com.svg"
 								alt=""
-								class="svg__size"
+								class="w-[32px] md:w-[64px]"
 							/>
 							<div>
 								<h3 class="services__title">Firebase</h3>
@@ -327,12 +384,12 @@
 						</div>
 					</div>
 
-					<div class="services__item">
-						<div class="flex gap items-center">
+					<div class="services__item flex items-center">
+						<div class="flex gap items-center p-2">
 							<img
 								src="./assets/img/mongodb-svgrepo-com.svg"
 								alt=""
-								class="svg__size"
+								class="w-[32px] md:w-[64px]"
 							/>
 							<div>
 								<h3 class="services__title">MongoDB</h3>
@@ -341,12 +398,12 @@
 						</div>
 					</div>
 
-					<div class="services__item">
-						<div class="flex gap items-center">
+					<div class="services__item flex items-center">
+						<div class="flex gap items-center p-2">
 							<img
 								src="./assets/img/github-svgrepo-com.svg"
 								alt=""
-								class="svg__size"
+								class="w-[32px] md:w-[64px]"
 							/>
 							<div>
 								<h3 class="services__title">GitHub</h3>
@@ -357,12 +414,12 @@
 						</div>
 					</div>
 
-					<div class="services__item">
-						<div class="flex gap items-center">
+					<div class="services__item flex items-center">
+						<div class="flex gap items-center p-2">
 							<img
 								src="./assets/img/nodejs-icon-svgrepo-com.svg"
 								alt=""
-								class="svg__size"
+								class="w-[32px] md:w-[64px]"
 							/>
 							<div>
 								<h3 class="services__title">NodeJS</h3>
@@ -371,12 +428,12 @@
 						</div>
 					</div>
 
-					<div class="services__item">
-						<div class="flex gap items-center">
+					<div class="services__item flex items-center">
+						<div class="flex gap items-center p-2">
 							<img
 								src="./assets/img/express-svgrepo-com.svg"
 								alt=""
-								class="svg__size"
+								class="w-[32px] md:w-[64px]"
 							/>
 							<div>
 								<h3 class="services__title">ExpressJS</h3>
@@ -387,12 +444,12 @@
 						</div>
 					</div>
 
-					<div class="services__item">
-						<div class="flex gap items-center">
+					<div class="services__item flex items-center">
+						<div class="flex gap items-center p-2">
 							<img
 								src="./assets/img/tailwindcss-icon-svgrepo-com.svg"
 								alt=""
-								class="svg__size"
+								class="w-[32px] md:w-[64px]"
 							/>
 							<div>
 								<h3 class="services__title">TailWindCSS</h3>
@@ -403,12 +460,12 @@
 						</div>
 					</div>
 
-					<div class="services__item">
-						<div class="flex gap items-center">
+					<div class="services__item flex items-center">
+						<div class="flex gap items-center p-2">
 							<img
 								src="./assets/img/html-5-svgrepo-com.svg"
 								alt=""
-								class="svg__size"
+								class="w-[32px] md:w-[64px]"
 							/>
 							<div>
 								<h3 class="services__title">HTML</h3>
@@ -419,12 +476,12 @@
 						</div>
 					</div>
 
-					<div class="services__item">
-						<div class="flex gap items-center">
+					<div class="services__item flex items-center">
+						<div class="flex gap items-center p-2">
 							<img
 								src="./assets/img/css-3-svgrepo-com.svg"
 								alt=""
-								class="svg__size"
+								class="w-[32px] md:w-[64px]"
 							/>
 							<div>
 								<h3 class="services__title">CSS</h3>
@@ -435,12 +492,12 @@
 						</div>
 					</div>
 
-					<div class="services__item">
-						<div class="flex gap items-center">
+					<div class="services__item flex items-center">
+						<div class="flex gap items-center p-2">
 							<img
 								src="./assets/img/figma-svgrepo-com.svg"
 								alt=""
-								class="svg__size"
+								class="w-[32px] md:w-[64px]"
 							/>
 							<div>
 								<h3 class="services__title">Figma</h3>
@@ -449,12 +506,12 @@
 						</div>
 					</div>
 
-					<div class="services__item">
-						<div class="flex gap items-center">
+					<div class="services__item flex items-center">
+						<div class="flex gap items-center p-2">
 							<img
 								src="./assets/img/wordpress-color-svgrepo-com.svg"
 								alt=""
-								class="svg__size"
+								class="w-[32px] md:w-[64px]"
 							/>
 							<div>
 								<h3 class="services__title">Wordpress</h3>
@@ -466,15 +523,19 @@
 			</section>
 
 			<!-- ================Portfolio=============== -->
-			<section class="portfolio section" id="portfolio">
-				<h2 class="section__title">My Latest Project</h2>
-				<p class="section__description">
+			<section class="portfolio section py-32" id="portfolio">
+				<h2 class="section__title text-2xl sm:text-6xl">
+					My Latest Project
+				</h2>
+				<p class="section__description px-4">
 					It is a long established fact that a reader will be
 					distracted by the readable content of a page when looking at
 					its layout.
 				</p>
 
-				<div class="w-[90vw] mx-auto flex portfolio__items">
+				<div
+					class="w-[90vw] mx-auto flex flex-col sm:flex-row portfolio__items"
+				>
 					<a href="https://reactrealestateph9.netlify.app/">
 						<div class="portfolio__item">
 							<div class="protfolio__container container grid">
@@ -542,9 +603,13 @@
 
 			<!-- ===============Contact================ -->
 			<section class="contact section" id="contact">
-				<div class="w-[90vw] mx-auto contact__container grid">
-					<div class="contact__content">
-						<h2 class="section__title">Hire Me</h2>
+				<div
+					class="w-[90vw] mx-auto contact__container flex items-center flex-col md:flex-row"
+				>
+					<div class="contact__content py-20 md:py-0 w-full md:w-1/2">
+						<h2 class="section__title text-2xl sm:text-6xl">
+							Hire Me
+						</h2>
 
 						<p class="contact__description">
 							Contact with me phone:
@@ -594,7 +659,11 @@
 								></textarea>
 							</div>
 
-							<input type="submit" value="submit" class="btn" />
+							<input
+								type="submit"
+								value="submit"
+								class="btn w-full md:w-1/3 p-0"
+							/>
 
 							<p class="error__message" id="error-message"></p>
 						</form>
@@ -603,14 +672,16 @@
 					<img
 						src="./assets/img/contact-img.jpg"
 						alt=""
-						class="contact__img"
+						class="contact__img hidden md:block w-1/2"
 					/>
 				</div>
 			</section>
 
 			<!-- ==================Footer=============== -->
 			<footer class="footer">
-				<div class="w-[90vw] mx-auto footer__container grid">
+				<div
+					class="w-[90vw] mx-auto footer__container flex flex-col md:flex-row md:justify-between gap-2"
+				>
 					<a href="index.html" class="footer__logo"
 						><img
 							src="./assets/img/SIS.png"
@@ -622,7 +693,7 @@
 						<a
 							href="https://www.facebook.com/salman.ibnshafi.7/"
 							target="_blank"
-							class="footer__social-link"
+							class="footer__social-link hidden sm:flex sm:justify-center"
 						>
 							<i class="uil uil-facebook-f"></i>
 						</a>
@@ -630,7 +701,7 @@
 						<a
 							href="http://linkedin.com/in/salman-ibn-shafi-2963a6282"
 							target="_blank"
-							class="footer__social-link"
+							class="footer__social-link hidden sm:flex sm:justify-center"
 						>
 							<i class="uil uil-linkedin"></i>
 						</a>
@@ -638,7 +709,7 @@
 						<a
 							href="https://github.com/salman-ibne-shofi"
 							target="_blank"
-							class="footer__social-link"
+							class="footer__social-link hidden sm:flex sm:justify-center"
 						>
 							<i class="uil uil-github"></i>
 						</a>
