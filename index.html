@@ -158,28 +158,33 @@
 		<!-- ==============Main============= -->
 		<main class="main">
 			<!-- ================Home=============== -->
-			<section class="home" id="home">
-				<div class="w-[90vw] mx-auto home__container grid">
+			<section class="home py-[9rem] md:py-[12rem]" id="home">
+				<div
+					class="w-[90vw] mx-auto home__container flex flex-col md:flex-row-reverse justify-between md:items-center"
+				>
+					<img
+						src="./assets/img/home-img.png"
+						alt=""
+						class="home__img w-[240px] md:w-[420px] md:block"
+					/>
+
 					<div class="home__content">
-						<span class="home__subtitle"
+						<span class="home__subtitle mt-12"
 							>Welcome To My Portfolio</span
 						>
-						<h1 class="home__title text-4xl md:text-7xl">
+						<h1
+							class="home__title text-3xl md:text-7xl text-center md:text-left mb-6"
+						>
 							Hi, I'm Salman. <br />
 							<span>Web Developer.</span>
 						</h1>
 						<a
 							href="./assets/cv/Salman_Ibn_Shafi_CV.pdf"
-							class="cv__btn"
+							download
+							class="cv__btn text-center px-8 py-4 flex justify-self-center md:inline-block"
 							>Download CV</a
 						>
 					</div>
-
-					<img
-						src="./assets/img/home-img.png"
-						alt=""
-						class="home__img hidden sm:block"
-					/>
 				</div>
 			</section>
 
@@ -601,11 +606,15 @@
 					class="w-[90vw] mx-auto contact__container flex items-center flex-col md:flex-row"
 				>
 					<div class="contact__content py-20 md:py-0 w-full md:w-1/2">
-						<h2 class="section__title text-2xl sm:text-6xl">
+						<h2
+							class="section__title text-2xl sm:text-6xl text-center md:text-left"
+						>
 							Hire Me
 						</h2>
 
-						<p class="contact__description">
+						<p
+							class="contact__description text-center md:text-left"
+						>
 							Contact with me phone:
 							<a href="+01707696955">01707696955</a> or email:
 							<a href="mailto:salmanibnshafi@gmail.com"

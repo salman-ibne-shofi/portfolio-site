@@ -191,9 +191,7 @@ input {
 }
 
 /* Home */
-.home {
-	padding-block: 12rem 9rem;
-}
+
 
 .home__container {
 	grid-template-columns: 7fr 5fr;
@@ -219,23 +217,17 @@ input {
 }
 
 .home__img {
-	width: 420px;
-	height: 420px;
 	border-radius: 50%;
 	border: 0.75rem solid var(--container-color);
-	margin-left: auto;
 }
 
 .cv__btn {
-	margin-top: 32px;
-	padding: 1rem 2.5rem;
 	border-color: var(--text-color);
 	border: 2px solid var(--border-color);
 	color: var(--title-color);
 	font-size: var(--small-font-size);
 	font-weight: var(--weight-400);
 	border-radius: 6px;
-	display: inline-block;
 	transition: all 0.3s var(--transition);
 }
 
